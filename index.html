@@ -1,0 +1,495 @@
+<html lang="id-ID" style="" class=" js csstransforms3d csstransitions csstransformspreserve3d">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <meta content="Digital Wedding Invitation " name="description">
+  <title>Imam dan Maya - Undangan Pernikahan Digital</title> 
+  <link rel="profile" href="https://gmpg.org/xfn/11"> 
+  <link rel="shortcut icon" href="">
+   
+
+<!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="screen">
+   
+    <!-- Animate CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" media="screen">
+
+
+
+
+<link href="css/clean.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/swipebox.css"  type="text/css" media="screen"> 
+<link rel="stylesheet" href="css/swipebox.min.css"  type="text/css" media="screen"> 
+
+<script src="js/modernizr.custom.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+
+
+
+ </head> 
+ <body> 
+  
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.10&appId=2390488341219407';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<audio autoplay="" loop="" id="myAudio"> 
+   <source src="musik/musik.mp3" type="audio/mpeg"> 
+  </audio> 
+  <style>
+    #over-lay {
+        position:fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255,255,255,0.85);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0px;
+        cursor: pointer;    
+        z-index:9999;
+        display: -webkit-flex; /* Safari */
+        -webkit-align-items: center; /* Safari 7.0+ */
+        display: flex;
+        align-items: center;
+        color: #000;
+        font-family: 'CALIFB', serif, arial;
+    }
+    .tapfp h2 {
+        text-align:center;
+        font-size: 40px;
+        line-height: 50px;
+        color: #000;
+    }
+    .tapfp p {
+        text-align:center;
+        font-size: 28px;
+        line-height: 40px;
+        color: #000;
+    }    
+@media screen and (max-width: 769px) {
+    .tapfp h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .tapfp p {
+        font-size: 20px;
+        line-height: 30px;
+    }       
+}
+</style> 
+  <script>
+$(document).ready(function(){
+	$("#over-lay").click(function(){
+			$("#over-lay").fadeOut(650);
+		});
+});
+</script> 
+  <div onclick="playAudio()" type="button" id="over-lay" style="opacity: 0.982438;"> 
+   <div class="row" style="margin:0 auto;"> 
+    <div class="tapfp col-md-6 col-md-offset-3 col-sm-12"> 
+     <h2>Yth. <span 
+  type="text" name="nama"id="nama"
+  />
+<?php 
+include  "proses.php"; ?>
+
+  
+	<?php 
+	if(isset($_GET['nama'])){
+		$page = $_GET['nama'];
+ 
+		switch ($page) {
+			case 'home':
+				include "halamhome.php";
+				break;
+	
+		}
+	}else{
+		include "halaman/home.php";
+	}
+ 
+	 ?> </span></h2> 
+     <p>Selamat datang di undangan pernikahan Kami. <br>Gunakan browser Chrome atau Safari agar website tampil sempurna. Gunakan tombol arah di bawah utuk membuka halaman selanjutnya. <br><b>Mohon konfirmasi kehadirannya, klik sampai slide terakhir :)</b></p> 
+     <br> 
+     <p><strong>TAP UNTUK MELANJUTKAN</strong></p> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    x.play(); 
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+} 
+</script> 
+  <div class="container-fluid"> 
+   <div class="bb-custom-wrapper row"> 
+    <div id="clock" class="condon">
+     Undangan
+    </div> 
+    <script>									
+					$('#clock').countdown('2020/12/19 09:00:00', function(event) {
+					  $(this).html(event.strftime('%D:%H:%M:%S'));
+					});	
+					</script> 
+
+    <div id="bb-bookblock" class="bb-bookblock bb-vertical" onclick="playAudio()" > 
+
+     <div class="bb-item" style="display: block;"> 
+      <div class="konten"> 
+       <div class="konten-dalam konten-flex"> 
+        <div class="img-home"> 
+         <div class="nama-home">
+          Imam &amp; Maya
+         </div> 
+         <div class="tanggal-home">
+          Sabtu, 19 Desember 2020
+         </div> 
+         <img class="col-xs-12" src="image/wedding-invitation.png"> 
+         <div class="special-invite col-xs-12">
+           Kepada Yang Terhormat:
+          <br>
+          <span 
+  type="text" name="nama"id="nama"
+  />
+<?php 
+include  "proses.php"; ?>
+
+  
+	<?php 
+	if(isset($_GET['nama'])){
+		$page = $_GET['nama'];
+ 
+		switch ($page) {
+			case 'home':
+				include "halamhome.php";
+				break;
+	
+		}
+	}else{
+		include "halaman/home.php";
+	}
+ 
+	 ?> </span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="bb-item" style="display: none;">
+      <div class="konten cover-image" style="background-image:url(image/cover.jpg);"></div>
+     </div> 
+     <div class="bb-item" style="display: none;"> 
+      <div class="konten"> 
+       <div class="konten-dalam"> 
+        <div class="ceremony cleft col-md-6 col-xs-12"> 
+         <div class="cdleft"> 
+          <img class="top-el" src="image/element-top.png"> 
+          <p class="pembuka">Pada acara perayaan cinta yang menyatukan kami, dengan Anugrah dan Rahmat Tuhan, kami meminta kehadiran Anda pada acara pernikahan kami:</p> 
+          <h2>Imam Nawawi</h2> 
+          <div>
+           Putra dari Bpk. Zaenudin dan Ibu. Fatimah (Purbalingga)
+          </div> 
+          <p class="dengan">dengan</p> 
+          <h2>Maya Lalela</h2> 
+          <div>
+           Putri dari Bpk. Abdul Gani dan Ibu. Nur Lalela (Purwokerto)
+          </div> 
+          <img class="bot-el" src="image/element-bottom.png"> 
+         </div> 
+        </div> 
+        <div class="ceremony cright col-md-6 col-xs-12"> 
+         <div class="cdright"> 
+          <div class="akad-resepsi"> 
+           <p><b>Resepsi</b></p> 
+           <p>Sabtu, 19 Desember 2020<br> Jam 10:00 s/d 15:00 (WIB)<br> di Majasari, Kec. Bukateja, Kabupaten Purbalingga</p> 
+           <a href="https://maps.app.goo.gl/yUZCyZGzHiZ6zQS9A " target="_blank"> Buka di google map </a> 
+          </div> 
+          <div class="akad-resepsi"> 
+           <p><b>Akad Nikah</b></p> 
+           <p>Sabtu, 19 Desember 2020<br> Jam 08:00 s/d 09:00 (WIB)<br> di Majasari, Kec. Bukateja, Kabupaten Purbalingga</p> 
+           <a href="https://maps.app.goo.gl/yUZCyZGzHiZ6zQS9A" target="_blank"> Buka di google map </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="bb-item" style="display: none;"> 
+      <div class="konten"> 
+       <div class="konten-dalam konten-flex"> 
+        <div class="divlain"> 
+         <h2>Kisah Cinta</h2>
+         <br> 
+         <p> Berawal dari waktu yang lama, kami mengisi hari bersama, suka duka, canda tawa, berlari dan terjatuh. Mimpi yang mempersatukan kami, cinta yang membuat kami saling mengerti. Kadang kami membuat kalian semua marah, benci dan kecewa, tapi mengertilah, kami hanya dua insan yang sedang terlanda asmara. Kami akan selalu bersama untuk saling melengkapi merajut hidup yang sempurna. Sungguh indah cinta ini, cinta kami yang ber ujung dipernikahan akan menjadi bukti keseriusan kami dalam menata kehidupan dan masa depan. Semua masa yang telah kami lewati kini akan berakhir, dan kami akan memulai masa yang baru berdua dan slalu bersama untuk selamanya hingga ujung waktu. Semua ini tak lepas dari doa kedua orang tua dan kalian semua, terimakasih telah senantiasa menghantar kami hingga ke titik ini. Mohon doa restu.</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="bb-item" style="display: none;"> 
+      <div class="konten"> 
+       <div class="konten-dalam konten-flex"> 
+        <div class="divlain"> 
+         <h2 style="margin-bottom:40px;">Galeri Prewedding</h2> 
+         <div class="galeri"> 
+          <div class="col-md-4 col-sm-4 col-xs-6 img-galeri">
+           <a href="image/demo3/4a.jpg"><img width="480" height="320" src="image/demo3/4.jpg" class="attachment-galeri-thumb size-galeri-thumb" alt="" srcset="image/demo3/4.jpg 1568w" sizes="(max-width: 480px) 100vw, 480px"></a>
+          </div> 
+
+          <div class="col-md-4 col-sm-4 col-xs-6 img-galeri">
+           <a href="image/demo3/3a.jpg"><img width="480" height="320" src="image/demo3/3.jpg" class="attachment-galeri-thumb size-galeri-thumb" alt="" srcset="image/demo3/3.jpg 1568w" sizes="(max-width: 480px) 100vw, 480px"></a>
+          </div> 
+
+          <div class="col-md-4 col-sm-4 col-xs-6 img-galeri">
+           <a href="image/demo3/5a.jpg"><img width="480" height="320" src="image/demo3/5.jpg" class="attachment-galeri-thumb size-galeri-thumb" alt="" srcset="image/demo3/5.jpg 1568w" sizes="(max-width: 480px) 100vw, 480px"></a>
+          </div>
+
+ 
+          <div class="col-md-4 col-sm-4 col-xs-6 img-galeri">
+           <a href="image/demo3/2a.jpg"><img width="480" height="320" src="image/demo3/2.jpg" class="attachment-galeri-thumb size-galeri-thumb" alt="" srcset="image/demo3/2.jpg 480w" sizes="(max-width: 480px) 100vw, 480px"></a>
+          </div> 
+
+          <div class="col-md-4 col-sm-4 col-xs-6 img-galeri">
+           <a href="image/demo3/6a.jpg"><img width="480" height="320" src="image/demo3/6.jpg" class="attachment-galeri-thumb size-galeri-thumb" alt="" srcset="image/demo3/6.jpg 1568w" sizes="(max-width: 480px) 100vw, 480px"></a>
+          </div> 
+
+          <div class="col-md-4 col-sm-4 col-xs-6 img-galeri">
+           <a href="image/demo3/1a.jpg"><img width="480" height="320" src="image/demo3/1.jpg" class="attachment-galeri-thumb size-galeri-thumb" alt="" srcset="image/demo3/1.jpg 1568w" sizes="(max-width: 480px) 100vw, 480px"></a>
+          </div> 
+
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="bb-item" style="display: none;"> 
+      <div class="konten"> 
+       <div class="konten-dalam"> 
+        <div class="divlain"> 
+         <h2>Buku Tamu</h2>
+         <br> 
+         <div class="row"> 
+          <div class="col-md-8 col-md-offset-2"> 
+
+
+<div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop fb_iframe_widget_fluid" data-href="https://undangan2.nikahguys.com" data-width="100%" data-numposts="5">
+   </div>
+     </div>
+      </div>
+
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+
+<div class="bb-item" style="display: none;"> 
+      <div class="konten"> 
+       <div class="konten-dalam konten-flex"> 
+        <div class="divlain"> 
+         <h2>Konfirmasi Kehadiran</h2>
+         <br> 
+         <div style="margin-top: 30px"> 
+          <div role="form" class="wpcf7" id="wpcf7-f535-o1" lang="en-US" dir="ltr"> 
+           <div class="screen-reader-response"></div> 
+            <form role="form" id="contactForm" class="contact-form" data-toggle="validator" class="shake">
+            <div style="display: none;"> 
+             <input type="hidden" name="_wpcf7" value="535"> 
+             <input type="hidden" name="_wpcf7_version" value="5.1.4"> 
+             <input type="hidden" name="_wpcf7_locale" value="en_US"> 
+             <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f535-o1"> 
+             <input type="hidden" name="_wpcf7_container_post" value="0"> 
+            </div> 
+            <div class="row" style="margin-bottom:15px;"> 
+
+
+              <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="controls"><div class="form-group">
+                  <input type="text" id="name" class="form-control" placeholder="Nama Anda" required >
+                  <div class="help-block with-errrors"></div>
+                </div>
+              </div></div>
+             
+
+
+             <div class="col-md-4 col-sm-12 col-xs-12">
+              <div class="controls"><div class="form-group">
+                  <input type="email" class="email form-control" id="email" placeholder="Email Anda" required>
+                  <div class="help-block with-errrors"></div></div>
+                </div>
+              </div>
+
+             <div class="col-md-3 col-sm-12 col-xs-12">
+              <div class="controls"><div class="form-group">
+<select type="text" id="msg_subject" class="form-control" required>
+
+<option value="">-- Kehadiran --</option><option value="Hadir">Hadir</option><option value="Tidak Hadir">Tidak Hadir</option></select><div class="help-block with-errrors"></div></div>
+                
+</div>
+             
+</div> 
+    
+            <div class="col-md-2 col-sm-12 col-xs-12"><div class="form-group">
+                <div class="controls">
+                  <textarea id="message" cols="40" rows="3" 
+ placeholder="Ucapan untuk calon mempelai.." class="form-control" required ></textarea>
+                  <div class="help-block with-errrors"></div>
+                </div> 
+              </div></div>
+</div> 
+<div id="msgSubmit" class="h3 text-center hidden"></div> 
+              <input type="submit" id="submit" value="KIRIM" class="wpcf7-form-control wpcf7-submit"> 
+              <div class="clearfix"></div>           
+
+
+           </form>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       
+      </div> 
+     </div> 
+
+    </div> 
+    	<nav>
+					
+					<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>&nbsp;&nbsp;&nbsp;
+					<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+					
+				</nav>
+
+			</div>
+
+		</div>
+
+
+<!--Form JS  -->
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>      
+    <script type="text/javascript" src="assets/js/form-validator.min.js"></script>  
+    <script type="text/javascript" src="assets/js/contact-form-script.js"></script> 
+
+
+
+
+<!-- /bb-bookblock -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next' ),
+						$navPrev : $( '#bb-nav-prev' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 800,
+							shadowSides : 0.8,
+							shadowFlip : 0.7
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
+
+
+
+
+
+
+<!-- /swipebox-->
+
+<script src="js/jquery.swipebox.js"></script>
+	<script src="js/swipebox-config.js"></script>	
+
+ 
+    
+ 	</body>
+</html>
